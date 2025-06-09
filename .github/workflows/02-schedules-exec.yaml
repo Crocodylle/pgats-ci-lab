@@ -1,11 +1,11 @@
 #Ci de Nivel 1 - Disparo manual a partir do 1 clique 
 
 # nome do nosso 'pipeline'
-name: 'Execucao Manual'
+name: 'Execucao Scheduled/Agendado'
 # regras de disparo (gatilho/trigger)
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 6 * * 1'
 
     # a minuto, b hora, c dia, d mes, e dia da semana
 
