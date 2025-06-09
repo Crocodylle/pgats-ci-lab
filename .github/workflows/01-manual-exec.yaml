@@ -29,7 +29,5 @@ jobs:
         run: yarn playwright install
       - name: Executando Testes e2e
         run: yarn playwright test
-      - name: Gerando relatório e2e
-        run: yarn playwright show-report
-      
+     
         
