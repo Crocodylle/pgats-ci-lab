@@ -39,7 +39,7 @@ jobs:
         run: yarn playwright install
       - name: Executando Testes e2e
         run: yarn playwright test
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
           name: playwright-report
