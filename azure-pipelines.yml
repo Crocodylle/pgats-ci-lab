@@ -1,8 +1,8 @@
 # Azure Pipelines - Manual E2E Test Execution
 # Equivalent to .github/workflows/01-manual-exec.yaml
 
-pr: none  # No PR trigger
-trigger: none  # No CI trigger; manual only
+pr: none # No PR trigger
+trigger: none # No CI trigger; manual only
 
 pool:
   vmImage: ubuntu-latest
@@ -14,19 +14,19 @@ parameters:
     default: 'Execucao Manual'
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '22.x'
-  displayName: 'Install Node.js'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '22.x'
+    displayName: 'Install Node.js'
 
-- script: npm install -g yarn
-  displayName: 'Instalando Yarn'
+  - script: npm install -g yarn
+    displayName: 'Instalando Yarn'
 
-- script: yarn
-  displayName: 'Instalando dependencias'
+  - script: yarn
+    displayName: 'Instalando dependencias'
 
-- script: yarn playwright install
-  displayName: 'Instalando Playwright'
+  - script: yarn playwright install
+    displayName: 'Instalando Playwright'
 
-- script: yarn playwright test
-  displayName: 'Executando Testes e2e'
+  - script: yarn playwright test
+    displayName: 'Executando Testes e2e'
